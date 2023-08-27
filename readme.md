@@ -17,7 +17,7 @@
 
 
 
-# Discord Web Client 
+# Discord Api Client 
 Managing the interaction between Discord bots and their dashboards can be a complex task, often involving tedious API connections and data synchronization. Enter `discordapilink` – a revolutionary package designed to empower Discord bot developers with effortless dashboard integration.
 
 ## Why?
