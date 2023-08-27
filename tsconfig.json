@@ -18,7 +18,10 @@
       "resolveJsonModule": true,
       "importHelpers": true,
       "inlineSourceMap": false,
-      "forceConsistentCasingInFileNames": true
+      "forceConsistentCasingInFileNames": true,
+      "declaration": true,
+      "declarationDir": "./lib/typings",
+      "typeRoots": ["./typings", "./node_modules/@types"]
     },
     "ts-node": {
       "esm": true,

@@ -2,12 +2,13 @@
   "name": "discordwebclient",
   "version": "1.0.0",
   "description": "This is a package built with the intension of providing your discord bot to create web servers without any hardcore just use the pkg to build up",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "p":"npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "build": "tsc --project tsconfig.json",
+    "p": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "r": "rimraf bot/main.js && tsc --project tsconfig.test.json && nodemon bot/main.js"
   },
   "author": "",
   "type": "module",
@@ -15,11 +16,14 @@
   "dependencies": {
     "discord.js": "^14.13.0",
     "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "link": "^1.5.1",
+    "node": "^20.5.1",
     "yarn": "^1.22.19"
-
   },
   "devDependencies": {
     "@types/node": "^20.5.6",
+    "typedoc": "^0.25.0",
     "typescript": "^5.2.2"
   }
 }
