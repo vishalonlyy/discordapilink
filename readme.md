@@ -1,4 +1,4 @@
-<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Discord Web Client&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
+<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=DiscordWebClient&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
 [![Version][version-github-shield]](version-url)
 [![Forks][forks-github-shield]](https://github.com/vishal889/discordwebclient/network/members)
