@@ -1,7 +1,7 @@
 {
   "name": "discordwebclient",
   "version": "1.0.0",
-  "description": "This is a package built with the intension of providing your discord bot to create web servers without any hardcore just use the pkg to build up",
+  "description": "discordwebclient: Seamlessly connect your Discord bot to its dashboard using a simplified API. Effortlessly establish secure communication in just a few lines of code and under 5 seconds.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -10,9 +10,22 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "r": "rimraf bot/main.js && tsc --project tsconfig.test.json && nodemon bot/main.js"
   },
-  "author": "",
+  "keywords": [
+"discord",
+"setup", "bot", "open-source", 
+"discord", "discord-bot", "discord-api", "discord-api-client", 
+"package", "automation", "connector", "integration", "api-client", 
+"developer-tools", "rapid-development", "rapidapi",
+"web-dashboard", "bot-management", "api-integration","web-development",
+"dashboard-application", "bot-development", "discordwebclient"
+  ],
+  "author": "vishal889",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vishal889/discordwebclient"
+  },
   "type": "module",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^14.13.0",
     "express": "^4.18.2",
