@@ -1,3 +1,22 @@
+<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Discord Web Client&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
+
+[![Version][version-github-shield]](version-url)
+[![Forks][forks-github-shield]](https://github.com/vishal889/discordwebclient/network/members)
+[![Stargazers][stars-github-shield]](https://github.com/vishal889/discordwebclient/stargazers)
+[![Issues][issues-github-shield]](https://github.com/vishal889/discordwebclient/issues)
+[![MIT License][license-github-shield]](https://github.com/vishal889/discordwebclient/blob/master/LICENSE)
+[![Discord Support](https://discordapp.com/api/guilds/936226552256036926/widget.png?style=shield)](SupportServer)
+
+
+[chat-discord=shield]: https://img.shields.io/discord/936226552256036926?style=for-the-badge
+[version-github-shield]: https://img.shields.io/github/package-json/v/vishal889/discordwebclient?style=for-the-badge
+[forks-github-shield]: https://img.shields.io/github/forks/vishal889/discordwebclient?style=for-the-badge
+[stars-github-shield]: https://img.shields.io/github/stars/vishal889/discordwebclient?style=for-the-badge
+[issues-github-shield]: https://img.shields.io/github/issues/vishal889/discordwebclient?style=for-the-badge
+[license-github-shield]: https://img.shields.io/github/license/vishal889/discordwebclient?style=for-the-badge
+
+
+
 # Discord Web Client 
 Managing the interaction between Discord bots and their dashboards can be a complex task, often involving tedious API connections and data synchronization. Enter `discordwebclient` – a revolutionary package designed to empower Discord bot developers with effortless dashboard integration.
 
@@ -94,4 +113,4 @@ i.clearlogs() // clear the logs of the server runtime Or Error
 ```
 
 # Examples
-- [Basic DiscordBot Example]()
+- [Basic DiscordBot Example](https://github.com/vishal889/discordwebclient/blob/main/Examples/discordbot.js)
