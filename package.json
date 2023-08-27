@@ -1,7 +1,7 @@
 {
-  "name": "discordapiclient",
+  "name": "discordapilink",
   "version": "1.0.1",
-  "description": "discordapiclient: Seamlessly connect your Discord bot to its dashboard using a simplified API. Effortlessly establish secure communication in just a few lines of code and under 5 seconds.",
+  "description": "discordapilink: Seamlessly connect your Discord bot to its dashboard using a simplified API. Effortlessly establish secure communication in just a few lines of code and under 5 seconds.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -17,12 +17,12 @@
 "package", "automation", "connector", "integration", "api-client", 
 "developer-tools", "rapid-development", "rapidapi",
 "web-dashboard", "bot-management", "api-integration","web-development",
-"dashboard-application", "bot-development", "discordapiclient"
+"dashboard-application", "bot-development", "discordapilink"
   ],
   "author": "vishal889",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vishal889/discordapiclient"
+    "url": "https://github.com/vishal889/discordapilink"
   },
   "type": "module",
   "license": "MIT",
