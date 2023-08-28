@@ -108,9 +108,9 @@ class Build {
             throw new Error("No Port Specified");
         }
         
-        await Utils.Ubuild(this,this.engine); // Pass 'this' instance
+        await Utils.Ubuild(this,this.engine);
         
-        return this; // Return the instance of the class
+        return this;
     }
     
 
