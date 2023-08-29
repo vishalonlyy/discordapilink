@@ -1,6 +1,6 @@
 {
   "name": "discordapilink",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "discordapilink: Seamlessly connect your Discord bot to its dashboard using a simplified API. Effortlessly establish secure communication in just a few lines of code and under 5 seconds.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
