@@ -52,12 +52,14 @@ first of all, you would need to create a build process for sending and receiving
 const { Build } = require('discordapilink');
 const i = await new Build() // Start the build process by calling the build class and store it for later use
         i.setApis(["/api1","/api2"]); // you can add as many apis as you want 
+        i.setWebsockets(["/ws"]) // you can add as many websockets as you want
         i.setEngine("express"); // Select a engine
         i.setPort(3000) // set a port where u wanna start the server
         i.build() // build the server **!Important** 
 ```
 ### Build Options
 - `setApis` - set the apis for the server
+- `setWebsockets` - set the websockets for the server 
 - `setEngine` - set the engine for the server
 - `setPort` - set the port for the server
 - `build` - build the server
@@ -65,6 +67,7 @@ const i = await new Build() // Start the build process by calling the build clas
 
 **Extra Options** - Should not be used while building the server
 - `getApis` - get the apis currently loaded in the server 
+- `getWebsockets` - get the websockets currently loaded in the server
 - `getlength` - get the length of apis loaded 
 - `getlogs` - get the logs of the server runtime Or Error 
 - `clearlogs` - clear the logs of the server runtime Or Error
@@ -97,6 +100,23 @@ const { Api } = require('discordapilink');
 const a : Api = await new Api();
     a.receive("api1") // receive the data from the api where data was sent
 ```
+### Sending Data through Websocket
+```js
+const { Websocket } = require('discordapilink');
+const ws : Websocket = await new Websocket();
+        const testData = {
+            WebsocketName : "ws",
+            guild: message.guild?.name,
+            channel: message.channel.id,
+            user: message.author.id
+        } // Example Data<Object>. can be anything
+        
+    ws.setData({test: testData}) // set the data to be sent can be anything
+    ws.send("/ws"); // send the data to the api or ws.send("ws")
+```
+### Websocket Options
+- `setData` - set the data to be sent
+- `send` - send the data to the websocket
 
 ### Infomative operations
 ```js
@@ -107,6 +127,7 @@ const { Build } = require('discordapilink');
  */
 //assuming that the build process is completed and is stored in a variable called i
 i.getApis() // get the apis currently loaded in the server
+i.getWebsockets() // get the websockets currently loaded in the server
 i.getlength() // get the length of apis loaded
 i.getlogs() // get the logs of the server runtime Or Error
 i.clearlogs() // clear the logs of the server runtime Or Error
