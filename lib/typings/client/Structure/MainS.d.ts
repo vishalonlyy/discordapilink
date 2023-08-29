@@ -1,10 +1,17 @@
+/// <reference types="node" />
 import { Application } from "express";
+import WebSocket from "ws";
+import http from "http";
 declare class Build {
     engine: "default" | "express";
     app: Application | null;
     apis: string[];
     logs: string[];
     port: number;
+    server: http.Server;
+    websockets: string[];
+    wssmanager: WebSocket.Server;
+    wssBulit: any;
     constructor();
     /**
      * @param engine The engine to be used
@@ -19,15 +26,28 @@ declare class Build {
     /**
      * @returns The engine being used
      */
-    getEngine(): "express" | "default";
+    getEngine(): "default" | "express";
     /**
      * @param apis The API routes to set
      */
     setApis(apis: string[]): this;
     /**
+     * @param websockets The websockets to set
+     * @description Set the websockets to be used
+     * @returns this
+     */
+    setWebsockets(websockets: any[]): this;
+    /**
      * @returns The API routes being used
      */
     getApis(SpecificApi?: string): string[] | null;
+    /**
+     * @returns The websockets being used
+     * @param SpecificWebsocket The specific websocket to get
+     * @description Get the websockets being used
+     * @returns this
+     */
+    getWebsockets(SpecificWebsocket?: string): string[] | null;
     /**
      * @returns The length of the API routes being used ? or the length of a specific API route
      * @param SpecificApi The specific API route to get the length of

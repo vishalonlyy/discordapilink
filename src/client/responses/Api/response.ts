@@ -68,12 +68,12 @@ class Api {
         if (ApiLength > 1) {
             throw new Error("Multiple Apis Found with the name ::" + Api);
         }
-        if(Api.includes){
+        
             Utils.sendApiData(Api, this.status, this.message, this.data).then(()=>{
             this.xInstance?.logs.push("[Send] Sending Response");
             this.xInstance?.logs.push(JSON.stringify({status: this.status, message: this.message, data: this.data}, null, 2));
         })
-        }
+        
         
     }
 

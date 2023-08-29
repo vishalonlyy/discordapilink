@@ -1,7 +1,10 @@
 import Build from "../client/Structure/MainS.js";
+import WebSocket from "ws";
 export declare class Utils {
     private static xInstance;
+    private static websocketManager;
     static getXInstance(): Build;
+    static getWebsocketManager(): WebSocket.Server;
     /**
      * @param specifcEngine @optional The engine to be used
      * @description Build the server
@@ -28,4 +31,6 @@ export declare class Utils {
      *
      */
     static receiveApiData(Api: string): Promise<void>;
+    static sendWebsocketData(Websocket: any, status: number, message: string, data: any): Promise<void>;
+    static receiveWebsocketData(Websocket: any): Promise<void>;
 }

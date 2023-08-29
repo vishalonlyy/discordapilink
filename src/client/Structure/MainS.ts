@@ -1,12 +1,20 @@
 import express, { Application } from "express";
 import { Utils } from "../../server/utils.js";
-
+import WebSocket from "ws";
+import http from "http";
 class Build {
     public engine: "default" | "express";
     public app: Application | null = null;
     public apis: string[] = [];
     public logs: string[] = [];
     public port : number = null;
+    public server : http.Server = null;
+    public websockets : string[] = [];
+    public wssmanager : WebSocket.Server = null;
+    public wssBulit : any = {
+        "started": false,
+        "built": false
+    }
 
     constructor() {
         this.engine = null;
@@ -49,6 +57,17 @@ class Build {
     }
 
     /**
+     * @param websockets The websockets to set
+     * @description Set the websockets to be used
+     * @returns this
+     */
+    public setWebsockets(websockets: any[]): this {
+        this.wssBulit.started = true;
+        this.websockets = websockets;
+        return this;
+    }
+
+    /**
      * @returns The API routes being used
      */
     public getApis(SpecificApi?: string) : string[] | null {
@@ -59,6 +78,24 @@ class Build {
                 return null;
             } else {
                 return this.apis;
+            }
+        }
+    }
+
+    /**
+     * @returns The websockets being used
+     * @param SpecificWebsocket The specific websocket to get
+     * @description Get the websockets being used
+     * @returns this
+     */
+    public getWebsockets(SpecificWebsocket?: string) : string[] | null {
+        if (SpecificWebsocket) {
+            return this.websockets.filter((a) => a === SpecificWebsocket);
+        } else {
+            if (this.websockets.length === 0 || !this.websockets) {
+                return null;
+            } else {
+                return this.websockets;
             }
         }
     }
