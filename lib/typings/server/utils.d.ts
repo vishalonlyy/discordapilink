@@ -4,6 +4,11 @@ export declare class Utils {
     private static xInstance;
     private static websocketManager;
     static getXInstance(): Build;
+    /**
+     *
+     * @returns The websocket manager
+     * @description Get the websocket manager
+     */
     static getWebsocketManager(): WebSocket.Server;
     /**
      * @param specifcEngine @optional The engine to be used
@@ -31,6 +36,10 @@ export declare class Utils {
      *
      */
     static receiveApiData(Api: string): Promise<void>;
+    /**
+     * @param Websocket @required The Websocket to receive data from
+     * @description Receive Websocket Data from specific Websocket
+     * @returns {Promise<void>}
+     */
     static sendWebsocketData(Websocket: any, status: number, message: string, data: any): Promise<void>;
-    static receiveWebsocketData(Websocket: any): Promise<void>;
 }
