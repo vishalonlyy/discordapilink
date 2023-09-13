@@ -134,4 +134,4 @@ i.clearlogs() // clear the logs of the server runtime Or Error
 ```
 
 # Examples
-- [Basic DiscordBot Example](https://github.com/vishal889/discordapilink/blob/main/Examples/discordbot.js)
+- [Basic DiscordBot Example](https://github.com/vishal889/discordapilink/blob/main/Examples/discordbot.js).
